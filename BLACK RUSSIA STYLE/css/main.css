@@ -1,0 +1,762 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background: #1d1d1e;
+    color: #ffffff;
+    line-height: 1.5;
+    overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: #1a1a1a;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #ff0000;
+    border-radius: 10px;
+}
+
+.container {
+    max-width: 1554px;
+    margin-left: 180px;
+    margin-right: 180px;
+    height: 100px;
+}
+
+::selection {
+    background-color: #ff0000;
+    color: #2b2b2b;
+}
+
+::-moz-selection {
+    background-color: #ff0000;
+    color: #0a0a0a;
+}
+
+/* ========== КНОПКИ ========== */
+.btn {
+    font-family: 'Montserrat', sans-serif;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.btn--pay {
+    font-family: 'Unbounded', sans-serif;
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 0px;
+    padding: 12px 24px;
+    color: #ff1111;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn--pay:hover {
+    background: rgba(0, 0, 0, 0.178);
+}
+
+.desktop-buttons {
+    display: flex;
+    gap: 10px;
+    flex-shrink: 0;
+    margin-left: 3px;
+}
+
+/* ========== ХЕДЕР (ПК) — ИСПРАВЛЕННАЯ ВЕРСИЯ ========== */
+.header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    margin-top: 15px;
+}
+
+.header__container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 40px;
+    position: relative;
+}
+
+/* ЛОГОТИП — ПРИЖАТ К ЛЕВОМУ КРАЮ */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    position: absolute;
+    left: 40px;
+    flex-shrink: 0;
+}
+
+.logo img {
+    width: 45px;
+    height: 45px;
+    object-fit: contain;
+}
+
+.logo__name {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.2;
+}
+
+.logo__top {
+    font-size: 18px;
+    font-weight: 800;
+    color: #fff;
+}
+
+.logo__bottom {
+    font-size: 14px;
+    font-weight: 800;
+    color: #ff0000;
+}
+
+/* МЕНЮ — СТРОГО ПО ЦЕНТРУ, НЕ ДВИГАЕТСЯ */
+.nav {
+    display: flex;
+    align-items: center;
+}
+
+.nav__list {
+    display: flex;
+    gap: 60px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Agency+FB&display=swap');
+
+.nav__link {
+    font-family: 'Agency FB', 'Arial Narrow', 'Impact', sans-serif;
+    color: rgba(255, 255, 255, 0.322);
+    text-decoration: none;
+    margin-right: 10px;
+    font-size: 15px;
+    font-weight: 600;
+    transition: 0.3s;
+    white-space: nowrap;
+}
+
+.nav__link:hover {
+    color: #ff0000;
+}
+
+.btn--pay {
+    position: absolute;
+    right: 1px;
+    margin-top: -23px;
+    margin-left: 0;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+.connect {
+    padding: 80px 0 100px;
+}
+
+@font-face {
+    font-family: 'Bounded Black';
+    src: url('https://ofont.ru/download/5886/bounded-black.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+.connect__container {
+    margin: 0 auto;
+    padding: 0 40px;
+    text-align: center;
+    margin-top: 1500px;
+}
+
+.connect__title {
+    font-family: 'Unbounded', sans-serif;
+    font-weight: 800;
+    font-style: normal;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 80px;
+}
+
+.connect__desc {
+    color: rgb(255, 255, 255);
+    font-size: 18px;
+    line-height: 1.6;
+    max-width: 1100px;
+    margin-left: 100px;
+    margin: 0 auto 10px;
+    margin-bottom: 150px;
+}
+
+/* ========== КВАДРАТНЫЕ КАРТОЧКИ ========== */
+.connect__grid {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    gap: 0px;
+    max-width: 100%;
+    width: 100%;
+    height: 150px;
+    margin: 0;
+    padding: 0 25px;
+    box-sizing: border-box;
+}
+
+.connect__card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    flex: 1;
+    height: 220px;
+    background: rgba(255, 255, 255, 0);
+    border: 1px solid rgba(255, 255, 255, 0.15) !important;
+    border-top: 1px solid rgba(255, 255, 255, 0.15) !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15) !important;
+    border-left: 1px solid rgba(255, 255, 255, 0.15) !important;
+    border-right: 1px solid rgba(255, 255, 255, 0.15) !important;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    text-align: center;
+    position: relative;
+}
+
+.connect__card {
+    border-right: 1px solid rgba(255, 255, 255, 0);
+}
+
+.connect__card:not(:first-child) {
+    border-left: none;
+}
+
+/* Общий контейнер для иконок */
+.connect__card-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 160px;
+    height: 160px;
+    transition: transform 0.6s ease-out, color 0.3s ease;
+    margin-top: -120px;
+    margin-bottom: 10px;
+}
+
+/* Для SVG иконки Discord */
+.connect__card-icon svg {
+    width: 100%;
+    height: 100%;
+    color: rgb(226, 226, 226);
+}
+
+/* Для Font Awesome иконок — УВЕЛИЧЕНЫ И ТОРЧАТ */
+.connect__card-icon.fab,
+.connect__card-icon.fas {
+    font-size: 160px;
+    color: rgb(226, 226, 226);
+    margin-top: -120px;
+    width: auto;
+    height: auto;
+}
+
+/* ПРИ НАВЕДЕНИИ — ПОВОРОТ И СМЕНА ЦВЕТА ДЛЯ ВСЕХ */
+.connect__card:hover .connect__card-icon {
+    transform: rotateY(360deg);
+    color: #ff3d3d;
+}
+
+/* Discord отдельно (меняем цвет через svg) */
+.connect__card:hover .connect__card-icon svg {
+    color: #ff3d3d;
+}
+
+/* Текст — УВЕЛИЧЕН */
+.connect__card-content strong {
+    font-family: 'Unbounded', sans-serif;
+    font-weight: 800;
+    font-style: normal;
+    text-transform: uppercase;
+    letter-spacing: -2px;
+    color: rgba(226, 226, 226, 0.9);
+    font-size: 24px;
+    font-weight: 700;
+    transition: color 0.3s ease;
+    line-height: 1.2;
+}
+
+.connect__card-content span {
+    font-family: 'Unbounded', sans-serif;
+    font-weight: 800;
+    font-style: normal;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: rgba(226, 226, 226, 0.658);
+}
+
+.connect__card:hover .connect__card-content span {
+    color: #ff3d3d;
+    transition: color 0.4s ease;
+}
+
+.connect__card-content span {
+    color: rgb(255, 255, 255);
+    font-size: 12px;
+}
+
+.connect__card:hover .connect__card-content strong {
+    color: #ff3d3d;
+}
+
+/* Ссылка-обёртка для карточки */
+.connect__card-link {
+    text-decoration: none;
+    display: block;
+    flex: 1 1 0%;
+    min-width: 0;
+}
+
+/* Карточка внутри ссылки */
+.connect__card-link .connect__card {
+    height: 100%;
+    width: 100%;
+}
+
+/* Правая граница-палочка для каждого квадрата */
+.connect__card {
+    border-right: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+/* Убираем двойные границы (оставляем одну палочку между квадратами) */
+.connect__card:not(:first-child) {
+    border-left: none;
+}
+
+/* РОДИТЕЛЬСКИЙ КОНТЕЙНЕР */
+.connect__container {
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+.connect {
+    padding: 80px 0 100px;
+    width: 100%;
+    margin: 0;
+}
+
+@media (max-width: 1024px) {
+    .connect__grid {
+        height: 790px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    ::-webkit-scrollbar {
+        display: none;
+    }
+
+    .connect__desc {
+        font-size: 14px;
+        max-width: 400px;
+    }
+    
+    .connect__card-link {
+        flex: 1 1 auto;
+        min-width: 180px;
+    }
+    
+    /* Возвращаем левые границы у всех */
+    .connect__card-link .connect__card {
+        border-left: 1px solid rgba(255, 255, 255, 0.15);
+    }
+}
+
+@media (max-width: 768px) {
+    .connect__title {
+        font-size: 30px;
+        margin-bottom: 50px;
+        margin: 20px;
+    }
+
+    .connect__grid {
+        display: flex;
+        flex-direction: column;
+        gap: 0px;
+    }
+
+    .connect__card {
+        border: 1px solid rgba(255, 255, 255, 0.15) !important;
+        border-top: 1px solid rgba(255, 255, 255, 0.15) !important;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.15) !important;
+        border-left: 1px solid rgba(255, 255, 255, 0.15) !important;
+        border-right: 1px solid rgba(255, 255, 255, 0.15) !important;
+    }
+
+    .connect__card-link {
+        width: 100%;
+    }
+    
+    /* У всех квадратов одинаковые границы со всех сторон */
+    .connect__card-link .connect__card {
+        border: 1px solid rgba(255, 255, 255, 0.15);
+        border-top: none;
+    }
+    
+    /* Первому квадрату возвращаем верхнюю границу */
+    .connect__card-link:first-child .connect__card {
+        border-top: 1px solid rgba(255, 255, 255, 0.15);
+    }
+    
+    .connect__card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 180px;
+        width: 100%;
+        gap: 40px;
+    }
+    
+    .connect__card-icon {
+        width: 100px;
+        height: 100px;
+        margin-top: -25px;
+    }
+    
+    .connect__card-icon.fab,
+    .connect__card-icon.fas {
+        font-size: 90px;
+        margin-top: -25px;
+    }
+    
+    .connect__card-content strong {
+        font-size: 22px;
+        margin-top: -100px;
+    }
+        .connect__card-content {
+        position: relative;
+        top: -35px;
+    }
+}
+
+/* ========== ПРИЖИМАЕМ ФУТЕР К НИЗУ ========== */
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Основной контент — растягивается */
+.main-content,
+.content {
+    flex: 1;
+}
+
+/* ===== ОСНОВНОЙ КОНТЕЙНЕР ФУТЕРА ===== */
+.footer {
+    padding: 50px 0 30px;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    margin-top: auto;
+}
+
+.footer__container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+/* ===== ВАШ ЛОГОТИП (стили не менялись) ===== */
+.footer__logo .logo {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.footer__logo .logo-icon {
+    position: relative;
+    width: 120px;
+    height: 120px;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.footer__logo .logo-icon img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 130px;
+    height: 130px;
+    object-fit: contain;
+    transition: opacity 0.4s ease;
+}
+
+.footer__logo .logo-img-gray { opacity: 1; }
+.footer__logo .logo-img-color { opacity: 0; }
+.footer__logo .logo:hover .logo-img-gray { opacity: 0; }
+.footer__logo .logo:hover .logo-img-color { opacity: 1; }
+
+/* ===== ТЕКСТ О ПРОЕКТЕ ===== */
+.footer__info p {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 13px;
+    line-height: 1.5;
+    margin: 0;
+    max-width: 800px;
+}
+
+/* ===== СПИСОК ДОКУМЕНТОВ ===== */
+.footer__docs {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.footer__doc-link {
+    display: inline-block !important;
+    width: auto !important;
+    max-width: fit-content !important;
+    color: #6a6a6a;
+    text-decoration: none;
+    font-size: 13px;
+    transition: none;
+    line-height: 1;  /* ← фиксируем высоту строки */
+    margin: 0;
+    padding: 0;
+    transform: none;
+}
+
+.footer__doc-link:hover {
+    color: #ff0800;
+    font-weight: normal !important;
+    transform: none;
+}
+.footer__doc-link,
+.footer__doc-link *,
+.footer__links a,
+.footer__links a *,
+.payment-icon,
+.payment-icon * {
+    animation: none !important;
+    transition: none !important;
+    transform: translateY(0) !important;
+    transform: translateX(0) !important;
+    transform: rotate(0) !important;
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+    top: 0 !important;
+    bottom: 0 !important;
+}
+
+/* ===== ПЛАТЕЖНЫЕ СИСТЕМЫ ===== */
+.footer__payment {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    align-items: center;
+    margin-top: 5px;
+}
+
+.footer__payment span {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+}
+
+/* ===== КОПИРАЙТ ===== */
+.footer__copyright {
+    margin-top: 10px;
+}
+
+.footer__copyright p {
+    color: rgba(255, 255, 255, 0.3);
+    font-size: 10px;
+    line-height: 1.4;
+    margin: 5px 0;
+}
+
+/* ===== ССЫЛКИ ПОЛИТИК ===== */
+.footer__links {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+
+.footer__links a {
+    color: rgba(255, 255, 255, 0.5);
+    text-decoration: none;
+    font-size: 11px;
+    transition: color 0.2s ease;
+}
+
+.footer__links a:hover {
+    color: #ff4d4d;
+}
+
+.footer__links span {
+    color: rgba(255, 255, 255, 0.2);
+    font-size: 11px;
+}
+
+/* ===== АДАПТАЦИЯ ДЛЯ ТЕЛЕФОНОВ ===== */
+@media (max-width: 768px) {
+    .footer {
+        padding: 40px 0 25px;
+        text-align: center;
+    }
+    
+    .footer__info p {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .footer__docs,
+    .footer__payment,
+    .footer__links {
+        justify-content: center;
+    }
+    
+    .footer__logo .logo {
+        justify-content: center;
+    }
+}
+
+/* ========== КНОПКА НАВЕРХ ========== */
+.go-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 180px;
+    height: 50px;
+    background: rgb(37, 37, 37);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 1000;
+    font-family: 'Unbounded', sans-serif;
+}
+
+/* Кнопка появляется при прокрутке */
+.go-to-top.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.go-to-top__icon {
+    width: 18px;
+    height: 18px;
+    transition: transform 0.3s ease;
+}
+
+/* При наведении */
+.go-to-top:hover {
+    background: #ff3434;
+    border-color: #000000;
+}
+
+/* Стрелка — справа от текста */
+.go-to-top__arrow {
+    width: 18px;
+    height: 18px;
+    color: rgba(255, 255, 255, 0.8);
+    transition: all 0.3s ease;
+    order: 2;
+    font-family: 'Unbounded', sans-serif;
+}
+
+.go-to-top:hover .go-to-top__arrow {
+    color: #ffffff;
+}
+
+/* Текст — слева */
+.go-to-top__text {
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: rgba(255, 255, 255, 0.6);
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    order: 1;
+}
+
+.go-to-top:hover .go-to-top__text {
+    color: #ffffff;
+}
+
+.fa-angle-double-up{
+    font-size: 20px;
+    margin-top: 2px;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.go-to-top:hover .fa-angle-double-up{
+    color: #ffffff;
+}
+
+/* Адаптив для телефонов */
+@media (max-width: 768px) {
+    .go-to-top {
+        width: auto;
+        padding: 0 20px;
+        height: 45px;
+        bottom: 20px;
+        right: 20px;
+    }
+    
+    .go-to-top__arrow {
+        width: 14px;
+        height: 14px;
+    }
+    
+    .go-to-top__text {
+        font-size: 12px;
+    }
+    .fa-angle-double-up{
+        font-size: 15px;
+        margin-top: 3px;
+    }
+}
